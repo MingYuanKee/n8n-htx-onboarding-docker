@@ -12,7 +12,7 @@ Go to http://localhost:5678 and sign into n8n
 Click 'Start from scratch':
 ![image](https://github.com/user-attachments/assets/50201c73-0a2c-42c9-98a0-fc4d83b60abe)
 <br><br>
-Click 'Import from file':
+Click 'Import from File':
 ![image](https://github.com/user-attachments/assets/6c8844e9-569e-4c6a-921b-8904d2cc5d34)
 <br><br>
 Click the workflow to import:
@@ -24,14 +24,14 @@ Click into Airtable and click into '- Create New Credential -':
 Open the 'environmentVariable.env' and paste the AIRTABLE_API_TOKEN in it:
 ![image](https://github.com/user-attachments/assets/49e9380e-2fa8-4569-9a9f-a062f63dc9ab)
 <br><br>
-Click 'save':
+Click 'Save':
 ![image](https://github.com/user-attachments/assets/3eb7be6d-307f-442c-abf3-3de7eb47f47b)
 <br><br>
 After clicking 'Save', you should see that the connection is established successfully:
 ![image](https://github.com/user-attachments/assets/d13c3cdf-55b1-4911-92d5-cf92122ada51)
 <br><br>
 Click 'Back to Canvas':
-![image](https://github.com/user-attachments/assets/1c1395d0-43ac-4cd8-94bb-4e4d0bb10811)
+<img width="995" alt="image" src="https://github.com/user-attachments/assets/e7f062c7-00e9-451f-a861-3edaba925b9e" />
 <br><br>
 Click into 1 of the 3 'Todoist', input the 'TODOLIST_API_KEY' in 'environmentVariable.env' as the API Key:
 ![image](https://github.com/user-attachments/assets/bd49667e-b032-47dc-9f7b-4f4c42e69208)
