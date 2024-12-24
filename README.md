@@ -12,7 +12,7 @@ Do note that for both the steps below and the form which was hosted on the Cloud
 Please clone this repository.<br><br>
 Run the below script to start n8n in Docker (the first 2 lines below is to point the directory to where the files are stored in your local from the cloning of this repo):<br>
 cd .ssh<br>
-cd n8n-htx-onboarding-docker<br>
+cd n8n-htx-onboarding<br>
 docker compose up -d<br>
 
 Go to http://localhost:5678 and sign into n8n
