@@ -49,8 +49,8 @@ Click into the remaining 2 Todoist tiles:
 Select the credential which was already created just now:
 ![image](https://github.com/user-attachments/assets/e07cadb2-7716-4677-b2a6-9788ffd26576)
 <br><br>
-To test the workflow if it working, double click into the 'On form submission':
-![image](https://github.com/user-attachments/assets/65a418f2-40fe-4e72-99e0-9634ba517b12)
+Click 'Save' at the top right (very important). To test the workflow if it working, double click into the 'On form submission':
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/9e7d65d5-3c00-4840-9d70-5f8f9cb3e621" />
 <br><br>
 You can click the 'Test URL' or the 'Production URL' but either one will generate data in my Airtable and Todoist. Click 'Test step':
 ![image](https://github.com/user-attachments/assets/a143f4c3-e86d-40cd-9477-f9bdf070791c)
