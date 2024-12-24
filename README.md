@@ -8,7 +8,6 @@ As part of the Error Handling, an error workflow will run if there are any failu
 As n8n is an app, no doubt the workflows I created can be imported to n8n, the credentials set up for linking to external apps such as Airtable, Todoist and Gmail might be time consuming. If you would like to directly test submitting the form and emailing me to check if the employee record is created in my Airtable and if the tasks records are created in my Todoist, you can go to this link where I have the form hosted on a Cloud via Render: https://github.com/MingYuanKee/n8n-htx-onboarding <br><br>
 Do note that for both the steps below and the form which was hosted on the Cloud, the both use the same Airtable, Todoist and Gmail account by me. This would mean that if you test using the form link in the Cloud or you got the n8n working in your local, the employee record and task record will be created in the same place. 
 <br><br>
-<br><br>
 # Steps:
 Please clone this repository.<br><br>
 Run the below script to start n8n in Docker (the first 2 lines below is to point the directory to where the files are stored in your local from the cloning of this repo):<br>
@@ -112,7 +111,8 @@ Change the timezone:
 <br><br>
 Activate the workflow:
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/29037d5b-b91b-4928-aee7-4dd8113f804e" />
-
+<br><br>
+Thank you
 
 
 
