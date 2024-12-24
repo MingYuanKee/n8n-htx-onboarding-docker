@@ -1,0 +1,65 @@
+{
+  "name": "Error Workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "abf6cdf1-4c4e-4017-8957-151a72842a16",
+      "name": "Error Trigger"
+    },
+    {
+      "parameters": {
+        "sendTo": "msaiwork2@gmail.com",
+        "subject": "={{ $json.workflow.name }} failed",
+        "message": "=<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Workflow Failure Notification</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            background-color: #f8f9fa;\n            color: #333;\n            margin: 0;\n            padding: 20px;\n        }\n        .container {\n            max-width: 600px;\n            margin: 0 auto;\n            background: #ffffff;\n            border: 1px solid #dddddd;\n            border-radius: 8px;\n            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n            padding: 20px;\n        }\n        h1 {\n            color: #d9534f;\n            text-align: center;\n        }\n        p {\n            margin: 10px 0;\n        }\n        .info {\n            background: #f9f9f9;\n            border-left: 4px solid #007bff;\n            padding: 10px;\n            margin: 10px 0;\n            border-radius: 4px;\n        }\n        .info pre {\n            background: #f4f4f4;\n            padding: 10px;\n            border-radius: 4px;\n            overflow-x: auto;\n        }\n        footer {\n            text-align: center;\n            margin-top: 20px;\n            font-size: 12px;\n            color: #888;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <h1>Workflow Failure Notification</h1>\n        <p>Hi HTX team,</p>\n        <p>An error has been received in the following n8n workflow:</p>\n        <p><strong>Workflow Name:</strong> {{ $json.workflow.name }}</p>\n        <p><strong>Date and Time of Failure (SGT):</strong> {{ $now }}</p>\n        <p><strong>Last Node Executed with Error:</strong> {{ $json.execution.lastNodeExecuted }}</p>\n        <div class=\"info\">\n            <p><strong>Error Message:</strong></p>\n            <pre>{{ $json.execution.error.message }}</pre>\n        </div>\n        <div class=\"info\">\n            <p><strong>Error Stack:</strong></p>\n            <pre>{{ $json.execution.error.stack }}</pre>\n        </div>\n        <footer>\n            This is a system-generated email, please do not reply to this email.\n        </footer>\n    </div>\n</body>\n</html>\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        220,
+        0
+      ],
+      "id": "86d0efba-12ba-47bc-bfcf-0b0e04ee05c1",
+      "name": "Gmail",
+      "webhookId": "5434ded6-8027-4954-ab2b-03a0194bdce3",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VZi9hLvT7AJ2QJRh",
+          "name": "Gmail account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Singapore",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "b8bb4375-aa89-4575-a113-125b870aacc1",
+  "meta": {
+    "instanceId": "1bcdd41498f45088ac311042f25ec3d44a74a483860b8721f6e5e14a52f999d4"
+  },
+  "id": "q4RKICgXKaSlENcA",
+  "tags": []
+}

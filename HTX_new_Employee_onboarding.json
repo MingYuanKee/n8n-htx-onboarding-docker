@@ -1,0 +1,404 @@
+{
+  "name": "HTX new Employee onboarding",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "New Employee Account Creation",
+        "formDescription": "Please fill in the new Employee's details:",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "First Name",
+              "placeholder": "Enter First Name",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Last Name",
+              "placeholder": "Enter Last Name",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Team",
+              "placeholder": "Enter Team Name",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Title",
+              "placeholder": "Enter Title",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Location",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Raffles City Tower"
+                  },
+                  {
+                    "option": "Revenue House"
+                  }
+                ]
+              },
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "path": "newEmployeeOnboard"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "46ba1619-7481-4306-8898-266379c8f711",
+      "name": "On form submission",
+      "webhookId": "01a669c2-18b7-47a1-b444-f4922cd6fccc",
+      "notesInFlow": true,
+      "notes": "Input new employee details"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "da88b0f5-33dc-492f-b67a-eb278ec6bee3",
+              "name": "First Name",
+              "value": "={{ $json['First Name'] }}",
+              "type": "string"
+            },
+            {
+              "id": "9632933b-945f-4b28-b1a4-9d871dd91021",
+              "name": "Last Name",
+              "value": "={{ $json['Last Name'] }}",
+              "type": "string"
+            },
+            {
+              "id": "a8050eb1-bb31-490e-924b-bc1ea5f7c63d",
+              "name": "Team",
+              "value": "={{ $json.Team }}",
+              "type": "string"
+            },
+            {
+              "id": "c552a934-8168-4de7-8523-3466d9fcc135",
+              "name": "Title",
+              "value": "={{ $json.Title }}",
+              "type": "string"
+            },
+            {
+              "id": "416e8f6b-9744-414d-b27b-0815ee556341",
+              "name": "Location",
+              "value": "={{ $json.Location }}",
+              "type": "string"
+            },
+            {
+              "id": "2600aff2-c22e-49cc-8e18-1fb0d0aaa19f",
+              "name": "Full Name",
+              "value": "={{ $json['First Name'] +\" \" +$json['Last Name']  }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        0
+      ],
+      "id": "9d4be27b-5dce-4408-b12a-d0ad8759c145",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appzV0Oz40GYJIDRy",
+          "mode": "list",
+          "cachedResultName": "HTX Employee Onboarding",
+          "cachedResultUrl": "https://airtable.com/appzV0Oz40GYJIDRy"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblVikM1VEN4PJl2R",
+          "mode": "list",
+          "cachedResultName": "Employee",
+          "cachedResultUrl": "https://airtable.com/appzV0Oz40GYJIDRy/tblVikM1VEN4PJl2R"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "First Name": "={{ $json['First Name'] }}",
+            "Last Name": "={{ $json['Last Name'] }}",
+            "Team": "={{ $json.Team }}",
+            "Title": "={{ $json.Title }}",
+            "Location": "={{ $json.Location }}",
+            "Full Name": "={{ $json['Full Name'] }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "EmployeeGuid",
+              "displayName": "EmployeeGuid",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "First Name",
+              "displayName": "First Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Last Name",
+              "displayName": "Last Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Team",
+              "displayName": "Team",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Location",
+              "displayName": "Location",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "ignoreTypeMismatchErrors": false,
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "d3cbdabe-ed2b-4f39-9b95-281222d28384",
+      "name": "Airtable",
+      "notesInFlow": true,
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "K70O5oVJ705bvkcb",
+          "name": "Airtable Personal Access Token account"
+        }
+      },
+      "notes": "Create new Employee record"
+    },
+    {
+      "parameters": {
+        "project": {
+          "__rl": true,
+          "value": "2345516748",
+          "mode": "list",
+          "cachedResultName": "My work 🎯"
+        },
+        "content": "=Prepare Laptop for new Employee:\n{{ $json.fields['Full Name'] }}, {{ $json.fields.Title }}\n{{ $json.fields.Team }}\n{{ $json.fields.Location }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.todoist",
+      "typeVersion": 2.1,
+      "position": [
+        660,
+        0
+      ],
+      "id": "7eb8e957-3d9f-4cda-a93e-027071e08fc9",
+      "name": "Todoist",
+      "notesInFlow": true,
+      "credentials": {
+        "todoistApi": {
+          "id": "ibq4g1C0l62Rfcub",
+          "name": "Todoist account"
+        }
+      },
+      "notes": "Prepare Laptop"
+    },
+    {
+      "parameters": {
+        "project": {
+          "__rl": true,
+          "value": "2345516748",
+          "mode": "list",
+          "cachedResultName": "My work 🎯"
+        },
+        "content": "=Prepare Welcome Goodie Bag for new Employee:\n{{ $json.fields['Full Name'] }}, {{ $json.fields.Title }}\n{{ $json.fields.Team }}\n{{ $json.fields.Location }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.todoist",
+      "typeVersion": 2.1,
+      "position": [
+        660,
+        200
+      ],
+      "id": "7ccd67e8-231a-4167-80a4-c203537bdd14",
+      "name": "Todoist1",
+      "notesInFlow": true,
+      "credentials": {
+        "todoistApi": {
+          "id": "ibq4g1C0l62Rfcub",
+          "name": "Todoist account"
+        }
+      },
+      "notes": "Prepare Welcome Goodie Bag"
+    },
+    {
+      "parameters": {
+        "project": {
+          "__rl": true,
+          "value": "2345516748",
+          "mode": "list",
+          "cachedResultName": "My work 🎯"
+        },
+        "content": "=Prepare staff pass for new Employee:\n{{ $json.fields['Full Name'] }}, {{ $json.fields.Title }}\n{{ $json.fields.Team }}\n{{ $json.fields.Location }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.todoist",
+      "typeVersion": 2.1,
+      "position": [
+        660,
+        -160
+      ],
+      "id": "e7defea2-6ad7-4615-9894-368a264c3dd6",
+      "name": "Todoist2",
+      "notesInFlow": true,
+      "credentials": {
+        "todoistApi": {
+          "id": "ibq4g1C0l62Rfcub",
+          "name": "Todoist account"
+        }
+      },
+      "notes": "Prepare staff pass"
+    }
+  ],
+  "pinData": {
+    "On form submission": [
+      {
+        "json": {
+          "First Name": "First",
+          "Last Name": "Last",
+          "Team": "Team",
+          "Title": "Title",
+          "Location": "Raffles City Tower",
+          "submittedAt": "2024-12-23T10:06:57.383-05:00",
+          "formMode": "test"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable": {
+      "main": [
+        [
+          {
+            "node": "Todoist",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Todoist1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Todoist2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "q4RKICgXKaSlENcA"
+  },
+  "versionId": "94d1faa3-d6c1-4833-a692-6a18d3f806ad",
+  "meta": {
+    "instanceId": "1bcdd41498f45088ac311042f25ec3d44a74a483860b8721f6e5e14a52f999d4"
+  },
+  "id": "e84wnxEGX99ny3Pt",
+  "tags": []
+}
