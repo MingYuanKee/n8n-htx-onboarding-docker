@@ -64,7 +64,7 @@ Fill in the form and email me to get me to check if the employee record and task
 Click 'Save' on the top right:
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/87699339-19cf-47b7-89e0-2384b0224ddb" />
 <br><br>
-Click '+' and 'Worflow' on the top left:
+Click '+' and 'Workflow' on the top left:
 ![image](https://github.com/user-attachments/assets/19b16af0-ed87-4884-901c-e1b9efa84851)
 <br><br>
 Import the Error Workflow:
@@ -86,7 +86,7 @@ Click 'Select all':
 ![image](https://github.com/user-attachments/assets/bffc74be-ff34-49e3-9f13-e8df66a57db7)
 ![image](https://github.com/user-attachments/assets/f4dbecae-f583-4812-a44a-82d95a446166)
 <br><br>
-Click 'Save' (very important) and then click 'Test workflow' and email me with the timestamp to get met to check if I received an email of the error logs:
+Click 'Save' (very important) and then click 'Test workflow' and email me with the timestamp to get me to check if I received an email of the error logs:
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/58068691-ecb5-420e-b61d-2c99816f5a4e" />
 ![image](https://github.com/user-attachments/assets/0733cf80-27bd-4ee2-8a05-364ec09af39c)
 <br><br>
@@ -96,7 +96,7 @@ Go to 'Overview':
 Click into the first workflow:
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/f633401c-ca4f-484e-b574-1e0f77672ac2" />
 <br><br>
-Clikc 'Settings':
+Click 'Settings':
 ![image](https://github.com/user-attachments/assets/1a60bce4-6d0e-47d4-b2c2-b290e1ca94c3)
 <br><br>
 Select the error workflow as 'My workflow 2':
