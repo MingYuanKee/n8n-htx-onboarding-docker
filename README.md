@@ -1,7 +1,11 @@
 # n8n-htx-onboarding-docker
-
+In this project, I have created a form for users to key in the new employee's detail, where upon submitting the form, the new employee's account record will be created in the Airtable database. After that, there will 3 tasks created in the Todoist app as per the 'New employee issues (laptop, staff pass, welcome goody bag)' stated in the PDF. Do note that in the below steps, I will be guiding you all to key in the credentials for the Airtable and the Todoist where the new employee record will be created in the Airtable under my account and the tasks will also be created in the Todoist app under my account. To test if the workflow is working, you can do the steps as shown below and fill in the form and email me to get me to check if the employee record and tasks are created in my Airtable and Todoist account.<br><br>
+If you would like the records to be created in your Airtable account and your Todoist account, you can email me to let me know and I can send the steps as to where one can get the access token to your Airtable and Todoist account.
+<br><br>
+As part of the Error Handling, an error workflow will run if there are any failure in the new employee workflow, to send an email from a gmail account containing the error log to the designated email address. The error workflow is integrated with gmail.
+<br><br>
 Please clone this repository.<br><br>
-
+As n8n is an app, no doubt the workflows I created can be imported to n8n, the credentials set up for linking to external apps such as Airtable, Todoist and Gmail might be time consuming. <br><br>
 Run the below script to start n8n in Docker (the first 2 lines below is to point the directory to where the files are stored in your local from the cloning of this repo):<br>
 cd .ssh<br>
 cd htx-onboardingsystem<br>
@@ -55,9 +59,54 @@ You should see a form appearing, if you did not, type 'control+shift+R' to clear
 ![image](https://github.com/user-attachments/assets/412b135e-d1f8-4d02-8c79-395adbc62b6f)
 <br><br>
 Fill in the form and email me to get me to check if the employee record and tasks are created in my Airtable and Todoist.
-
-
-
+<br><br>
+# Error handling
+Click 'Save' on the top right:
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/87699339-19cf-47b7-89e0-2384b0224ddb" />
+<br><br>
+Click '+' and 'Worflow' on the top left:
+![image](https://github.com/user-attachments/assets/19b16af0-ed87-4884-901c-e1b9efa84851)
+<br><br>
+Import the Error Workflow:
+![image](https://github.com/user-attachments/assets/db9d0c07-e57c-4118-9358-7818ad8fa06e)
+<br><br>
+Click into the Gmail tile and input the credentials as per the GMAIL_CLIENT_ID and GMAIL_CLIENT_SECRET from 'environmentVariable.env':
+![image](https://github.com/user-attachments/assets/d8170d98-5ea8-4f8c-b68f-5362ed047bca)
+<br><br>
+After clicking 'Save', you should see that the connection is established successfully:
+![image](https://github.com/user-attachments/assets/1807bd5c-fd68-4c46-83b0-5362314f553d)
+<br><br>
+Click 'Sign in with Google' and select 'Genericrandom88@gmail.com':
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/efeaffef-0490-422a-b09f-66632b4bb082" />
+<br><br>
+Click 'Advanced' and click the blue underlined:
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/335a0716-79e3-47e9-87b0-399cc485120e" />
+Click 'Select all':
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/77cb3575-58cd-4d55-b6ea-e0444dc353fc" />
+![image](https://github.com/user-attachments/assets/bffc74be-ff34-49e3-9f13-e8df66a57db7)
+![image](https://github.com/user-attachments/assets/f4dbecae-f583-4812-a44a-82d95a446166)
+<br><br>
+Click 'Save' (very important) and then click 'Test workflow' and email me with the timestamp to get met to check if I received an email of the error logs:
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/58068691-ecb5-420e-b61d-2c99816f5a4e" />
+![image](https://github.com/user-attachments/assets/0733cf80-27bd-4ee2-8a05-364ec09af39c)
+<br><br>
+Go to 'Overview':
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/87fdb37b-f745-4f07-a87f-37bc24f24065" />
+<br><br>
+Click into the first workflow:
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/f633401c-ca4f-484e-b574-1e0f77672ac2" />
+<br><br>
+Clikc 'Settings':
+![image](https://github.com/user-attachments/assets/1a60bce4-6d0e-47d4-b2c2-b290e1ca94c3)
+<br><br>
+Select the error workflow as 'My workflow 2':
+![image](https://github.com/user-attachments/assets/3ac6d76e-331f-4c2f-b73b-007a43ca573d)
+<br><br>
+Change the timezone:
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/bd0db9fe-4090-4700-95c7-b6d05a9ff621" />
+<br><br>
+Activate the workflow:
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/29037d5b-b91b-4928-aee7-4dd8113f804e" />
 
 
 
