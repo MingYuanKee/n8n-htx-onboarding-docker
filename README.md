@@ -1,11 +1,16 @@
 # n8n-htx-onboarding-docker
-In this project, I have created a form for users to key in the new employee's detail, where upon submitting the form, the new employee's account record will be created in the Airtable database. After that, there will 3 tasks created in the Todoist app as per the 'New employee issues (laptop, staff pass, welcome goody bag)' stated in the PDF. Do note that in the below steps, I will be guiding you all to key in the credentials for the Airtable and the Todoist where the new employee record will be created in the Airtable under my account and the tasks will also be created in the Todoist app under my account. To test if the workflow is working, you can do the steps as shown below and fill in the form and email me to get me to check if the employee record and tasks are created in my Airtable and Todoist account.<br><br>
+In this project, I have created a form for users to key in the new employee's detail, where upon submitting the form, the new employee's account record will be created in the Airtable database. After that, there will 3 tasks created in the Todoist app as per the 'New employee issues (laptop, staff pass, welcome goody bag)' stated in the PDF. <br><br>
+Do note that in the below steps, I will be guiding you to key in the credentials to the external apps that I am integrating to such as Airtable and the Todoist where the new employee record will be created in the Airtable under my account and the tasks will be created in the Todoist app under my account. To test if the workflow is working, you can do the steps as shown below and fill in the form and email me to get me to check if the employee record and tasks are created in my Airtable and Todoist account.<br><br>
 If you would like the records to be created in your Airtable account and your Todoist account, you can email me to let me know and I can send the steps as to where one can get the access token to your Airtable and Todoist account.
 <br><br>
 As part of the Error Handling, an error workflow will run if there are any failure in the new employee workflow, to send an email from a gmail account containing the error log to the designated email address. The error workflow is integrated with gmail.
 <br><br>
+As n8n is an app, no doubt the workflows I created can be imported to n8n, the credentials set up for linking to external apps such as Airtable, Todoist and Gmail might be time consuming. If you would like to directly test submitting the form and emailing me to check if the employee record is created in my Airtable and if the tasks records are created in my Todoist, you can go to this link where I have the form hosted on a Cloud via Render: https://github.com/MingYuanKee/n8n-htx-onboarding <br><br>
+Do note that for both the steps below and the form which was hosted on the Cloud, the both use the same Airtable, Todoist and Gmail account by me. This would mean that if you test using the form link in the Cloud or you got the n8n working in your local, the employee record and task record will be created in the same place. 
+<br><br>
+<br><br>
+# Steps:
 Please clone this repository.<br><br>
-As n8n is an app, no doubt the workflows I created can be imported to n8n, the credentials set up for linking to external apps such as Airtable, Todoist and Gmail might be time consuming. <br><br>
 Run the below script to start n8n in Docker (the first 2 lines below is to point the directory to where the files are stored in your local from the cloning of this repo):<br>
 cd .ssh<br>
 cd htx-onboardingsystem<br>
