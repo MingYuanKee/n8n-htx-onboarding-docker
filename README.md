@@ -71,7 +71,7 @@ Import the Error Workflow:
 ![image](https://github.com/user-attachments/assets/db9d0c07-e57c-4118-9358-7818ad8fa06e)
 <br><br>
 Click into the Gmail tile and input the credentials as per the GMAIL_CLIENT_ID and GMAIL_CLIENT_SECRET from 'environmentVariable.env':
-![image](https://github.com/user-attachments/assets/d8170d98-5ea8-4f8c-b68f-5362ed047bca)
+![image](https://github.com/user-attachments/assets/97b75414-390a-48d9-a36a-0f0cf505804f)
 <br><br>
 After clicking 'Save', you should see that the connection is established successfully:
 ![image](https://github.com/user-attachments/assets/1807bd5c-fd68-4c46-83b0-5362314f553d)
